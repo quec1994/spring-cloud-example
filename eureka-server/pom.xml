@@ -12,7 +12,7 @@
   <artifactId>eureka-server</artifactId>
 
   <properties>
-    <docker.description>description="Spring Cloud 例子"</docker.description>
+    <docker.description>description="Spring Cloud Eureka Server 例子"</docker.description>
     <docker.exposes>8761</docker.exposes>
     <docker.workdir>/opt/eureka</docker.workdir>
     <docker.volumes>/opt/eureka/logs</docker.volumes>
