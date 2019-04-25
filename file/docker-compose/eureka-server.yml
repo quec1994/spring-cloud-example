@@ -1,0 +1,26 @@
+version: '3'
+services:
+  eureka1:
+    image: "eureka-server:latest"
+    ports:
+      - "8761:8761"
+    external_links:
+      - eureka2:peer2
+      - eureka3:peer3
+    container_name: eureka1
+  eureka2:
+    image: "eureka-server:latest"
+    ports:
+      - "8762:8761"
+    external_links:
+      - eureka1:peer2
+      - eureka2:peer3
+    container_name: eureka2
+  eureka3:
+    image: "eureka-server:latest"
+    ports:
+      - "8763:8761"
+    external_links:
+      - eureka1:peer2
+      - eureka2:peer3
+    container_name: eureka3
