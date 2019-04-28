@@ -2,10 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <packaging>pom</packaging>
   <modules>
     <module>eureka-server</module>
     <module>config-server</module>
+    <module>producer</module>
+    <module>consumer</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -17,6 +18,7 @@
   <artifactId>spring-cloud-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>spring-cloud-example</name>
+  <packaging>pom</packaging>
   <description>Demo project for Spring Boot</description>
 
   <properties>
@@ -43,15 +45,16 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
-    <!--		<dependency>-->
-    <!--			<groupId>org.springframework.cloud</groupId>-->
-    <!--			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>-->
-    <!--		</dependency>-->
-    <!--		<dependency>-->
-    <!--			<groupId>org.springframework.cloud</groupId>-->
-    <!--			<artifactId>spring-cloud-starter-netflix-turbine</artifactId>-->
-    <!--		</dependency>-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
 
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>

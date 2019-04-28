@@ -1,3 +1,4 @@
+# 启动伪eureka服务器集群
 version: '3'
 services:
   eureka1:

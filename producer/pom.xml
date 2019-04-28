@@ -9,14 +9,17 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>config-server</artifactId>
+  <artifactId>producer</artifactId>
   <packaging>jar</packaging>
 
+  <properties>
+    <docker.description>description="Spring Cloud 服务提供者 例子"</docker.description>
+    <docker.exposes>8080</docker.exposes>
+    <docker.workdir>/opt/producer</docker.workdir>
+    <docker.volumes>/opt/producer/logs</docker.volumes>
+  </properties>
+
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-config-server</artifactId>
-    </dependency>
   </dependencies>
 
 </project>
